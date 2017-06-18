@@ -1,4 +1,4 @@
-var friends = require("../data/friends");
+var friends = require("../data/friends.js");
 
 
 
@@ -14,7 +14,7 @@ app.get("/api/friends", function(req, res) {
 
 app.post("/api/friends",function(req, res) {
   var newUser = req.body;
-  newUser.routeName = newUser.name.replace(/\s+/g, "").toLowerCase();
+  // newUser.routeName = newUser.name.replace(/\s+/g, "").toLowerCase();
 
   console.log(newUser);
   friends.push(newUser);
